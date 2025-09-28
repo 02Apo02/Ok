@@ -1,13 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Yükleme</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    #result { margin-top: 1rem; white-space: pre-wrap; background: #f0f0f0; padding: 1rem; border-radius: 5px; }
+    input, button { padding: 0.5rem; font-size: 1rem; }
+  </style>
 </head>
 <body>
   <input type="text" id="txt_id" placeholder="ID girin" value="701825">
   <button id="orderBtn">Yükleme Yap</button>
+  <div id="result"></div>
 
   <script>
     document.getElementById("orderBtn").addEventListener("click", () => {
@@ -25,7 +30,12 @@
         })
       })
       .then(res => res.json())
-      .then(data => console.log(data));
+      .then(data => {
+        document.getElementById("result").innerText = JSON.stringify(data, null, 2);
+      })
+      .catch(err => {
+        document.getElementById("result").innerText = "Hata: " + err;
+      });
     });
   </script>
 </body>
