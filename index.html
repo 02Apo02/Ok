@@ -1,42 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Yükleme</title>
-  <style>
-    body { font-family: sans-serif; padding: 2rem; }
-    #result { margin-top: 1rem; white-space: pre-wrap; background: #f0f0f0; padding: 1rem; border-radius: 5px; }
-    input, button { padding: 0.5rem; font-size: 1rem; }
-  </style>
-</head>
-<body>
-  <input type="text" id="txt_id" placeholder="ID girin" value="701825">
-  <button id="orderBtn">Yükleme Yap</button>
-  <div id="result"></div>
+\u003Chtml lang="en">\u003Chead>\u003Cmeta name="color-scheme" content="dark light">
+\u003Cstyle>html,body{background:#121212 !important;color:#E1E3E2 !important;}\u003C/style>
 
-  <script>
-    document.getElementById("orderBtn").addEventListener("click", () => {
-      const uid = document.getElementById("txt_id").value;
-      fetch("/api/order", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          goods_id: "134",
-          goods_name: "450000000",
-          pid: 1,
-          uid,
-          gid: 2008,
-          tid: 40
-        })
-      })
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("result").innerText = JSON.stringify(data, null, 2);
-      })
-      .catch(err => {
-        document.getElementById("result").innerText = "Hata: " + err;
-      });
-    });
-  </script>
-</body>
-</html>
+  \u003Cmeta charset="utf-8">
+  \u003Cmeta http-equiv="X-UA-Compatible" content="IE=edge">
+  \u003Cmeta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  \u003Clink rel="icon" href="/Static/Activity/tgpay/images/icon.png">
+  \u003Ctitle>Yükleme\u003C/title>
+  \u003Clink href="/Static/Activity/tgpay/css/index.css?v=1.2.3" rel="preload" as="style">
+  \u003Clink href="/Static/Activity/tgpay/css/index.css?v=1.2.3" rel="stylesheet">
+  \u003Clink rel="stylesheet" href="/Static/Activity/css/liMarqueepwa.css">
+ \u003Clink rel="stylesheet" href="https://dabaojianxx.com/Static/js/layer/theme/default/layer.css?v=3.1.1" id="layuicss-layer">\u003C/head>
+ \u003Cbody>
+  \u003C!-- \u003Cnoscript>\u003Cstrong>We're sorry but downloadpage-verb doesn't work properly without JavaScript enabled. Please
+      enable it to continue.\u003C/strong>\u003C/noscript> -->
+  \u003Cdiv id="app">
+   \u003Cdiv>
+    \u003Cheader>
+     \u003Cdiv class="hbox_git p_fff">
+      \u003Cimg src="/Static/Activity/tgpay/images/icon.png" alt="" style="width: 2.7rem;">
+      \u003Cp style="margin-left: 0.6rem;font-size: 1rem;color: #233a5e;cursor: pointer;display: none;" id="git_p">Değişime git\u003C/p>
+     \u003C/div>
+     \u003C!-- \u003Cdiv class="hbox p_fff">
+                    \u003Cp style="margin-right: 0.5rem;color: #233a5e;">Giriş yapmadınız\u003C/p>
+                    \u003Cimg src="/Static/Activity/tgpay/images/icon.png" alt="" class="icon">
+                \u003C/div> -->
+    \u003C/header>
+    \u003Cdiv style="position: relative; line-height: 0;">
+     \u003C!-- \u003Cimg src="/Static/Activity/tgpay/images/annnn.png" alt="" style="width: 100%;"> -->
+     \u003Cimg src="/Static/Activity/tgpay/images/banner_default1.jpg" alt="" style="width: 100%;">
+    \u003C/div>
+    \u003Cdiv class="div_infos" style="margin-top: -5.5rem;">
+     \u003Cdiv class="div_lun">
+      \u003C!-- \u003Cdiv class="scrolling-div" id="div_lun">
+                    \u003C/div> -->
+      \u003Cdiv class="marquee_box" id="marquee_box1">
+       \u003Cul id="div_lun">
+        \u003C!-- \u003Cli>cxccccc\u003C/li> -->
+       \u003C/ul>
+      \u003C/div>
+     \u003C/div>
+     \u003Cdiv class="div_user_w">
+      \u003Cdiv class="div_bouns_w">
+       \u003Cimg src="/Static/Activity/tgpay/images/icon.png" class="icon">
+       \u003Cp class="div_bouns_w_p">Giriş yapmadınız\u003C/p>
+      \u003C/div>
+      \u003Cinput type="text" id="txt_id" class="input_id" placeholder="ID girin"> \u003Cinput type="button" class="input_butoon" value="Onayla">
+     \u003C/div>
+     \u003Cdiv id="div_sign" class="div_sign">\u003C/div>
+    \u003C/div>
+    \u003Cdiv data-v-5ec2abf3="" class="Mallbox" style="margin-bottom: 6rem;">
+     \u003C!-- \u003Cp data-v-5ec2abf3="" class="title" >Ürünler&nbsp;&nbsp;&nbsp;&nbsp;
+                    \u003Cselect id="slt_users" class="selectdivddd" style="display: none;">
+                    \u003C/select>
+                \u003C/p> -->
+     \u003Cdiv data-v-68d9b970="" data-v-5ec2abf3="" class="Mall">\u003C/div>
+    \u003C/div>
+    \u003Cdiv class="foot_gd">\u003C/div>
+    \u003Cdiv data-v-62cdb366="" class="mask" style="display: none;">\u003C/div>
+    \u003Cdiv data-v-eeba1b84="" class="mask" style="display: none;">
+     \u003Cdiv data-v-eeba1b84="" class="notice">
+      \u003Cp data-v-eeba1b84="">Yükleniyor,Lütfen bekleyin\u003C/p>
+     \u003C/div>
+    \u003C/div>
+    \u003Cfooter style="background-color: #6180c4;">
+     \u003Cdiv class="hbox footer-contactBox p_fff" style="margin-left: 1.6rem;">
+      \u003Cp style="margin-right: 0.5rem; opacity: 0.6;cursor: pointer;display: none;">Değişime git\u003C/p>
+      \u003C!-- \u003Cimg src="/Static/Activity/tgpay/images/icon.png" alt=""> -->
+     \u003C/div>
+     \u003Cdiv class="hbox p_fff" style="margin-right: 1.6rem;">
+      \u003Cp style="margin-right: 0.5rem;margin-left: 1rem; opacity: 0.6;cursor: pointer;" id="git_website">Resmi web sitesine&nbsp;git\u003C/p>
+      \u003C!-- \u003Cimg src="" alt=""> -->
+     \u003C/div>
+    \u003C/footer>
+   \u003C/div>
+  \u003C/div>
+  \u003Cscript type="text/javascript" src="/Static/Activity/js/jquery.min.js">\u003C/script>
+  \u003Cscript type="text/javascript" src="/Static/Activity/tgpay/js/webpay.js?v=1.2.3">\u003C/script>
+  \u003Cscript type="text/javascript" src="/Static/js/layer/layer.js">\u003C/script>
+  \u003Cscript type="text/javascript" src="/Static/Activity/js/jquery.liMarquee.js">\u003C/script>
+  \u003Cstyle>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 10px;
+            font-size: calc(10vw / 3.6);
+        }
+
+        @media only screen and (min-width: 500px) {
+            * {
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                font-size: calc(10vw / 7.2);
+            }
+        }
+    \u003C/style>
+  \u003Cscript>
+        var img_url = 'https://ddd.okeymires101.com/upload/image/icon/';
+    \u003C/script>
+ 
+\u003C/body>\u003C/html>
